@@ -14,6 +14,7 @@
 body {
   min-height: 100vh;
   margin: 0;
+  display: grid;
   grid-template-rows: min-content 1fr;
   background-color: hsl(var(--neutral-100));
   color: hsl(var(--neutral-900));
@@ -48,7 +49,6 @@ body {
   }
 
   .ql-editor {
-    display: grid;
 
     & > * {
       margin-inline: auto;

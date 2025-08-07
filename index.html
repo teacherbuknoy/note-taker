@@ -11,10 +11,30 @@
   <link rel="icon" href="https://francisrub.io/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="https://francisrub.io/apple-touch-icon" />
   <link rel="manifest" href="https://francisrub.io/manifest.webmanifest" />
+  
+  <link rel="preconnect" href="https://rsms.me/">
+  
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles/config.css">
+  <link rel="stylesheet" href="src/styles/index.css">
 </head>
 
 <body>
 
+  <div id="editor">
+    <p>Hello World!</p>
+    <p>Some initial <strong>bold</strong> text</p>
+    <p><br /></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+  <script>
+    const quill = new Quill('#editor', {
+      theme: 'snow'
+    });
+  </script>
+  <script src="src/scripts/index.js"></script>
 </body>
 
 </html>

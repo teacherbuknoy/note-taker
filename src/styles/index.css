@@ -1,0 +1,66 @@
+:root {
+  font-family: var(--font-body);
+  font-feature-settings: 'liga' 1, 'calt' 1;
+
+  --font-body: Inter, sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-body: InterVariable, sans-serif;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  background-color: hsl(var(--neutral-100));
+  color: hsl(var(--neutral-900));
+  font-family: 'Inter Display';
+}
+
+.ql-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: inherit;
+  color: inherit;
+}
+
+.ql-snow {
+
+  .ql-formats button,
+  .ql-stroke,
+  .ql-picker {
+    color: inherit;
+    stroke: currentColor;
+  }
+
+  .ql-picker-options {
+    background-color: hsl(var(--neutral-300));
+  }
+
+  &.ql-toolbar,
+  &.ql-container {
+    border-color: hsl(var(--neutral-900) / 25%);
+    font-family: var(--font-body);
+  }
+
+  .ql-editor {
+    & > * {
+      margin-inline: auto;
+      max-width: 65rem;
+    }
+
+    p, ul, ol {
+      font-size: 1.2rem;
+      color: hsl(var(--neutral-700))
+    }
+
+    h1 { font-size: 3.5832rem; }
+    h2 { font-size: 2.986rem; }
+    h3 { font-size: 2.488rem; }
+  }
+}

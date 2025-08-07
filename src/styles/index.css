@@ -14,7 +14,6 @@
 body {
   min-height: 100vh;
   margin: 0;
-  display: grid;
   grid-template-rows: min-content 1fr;
   background-color: hsl(var(--neutral-100));
   color: hsl(var(--neutral-900));
@@ -49,8 +48,11 @@ body {
   }
 
   .ql-editor {
+    display: grid;
+
     & > * {
       margin-inline: auto;
+      width: 100%;
       max-width: 65rem;
     }
 
@@ -59,8 +61,28 @@ body {
       color: hsl(var(--neutral-700))
     }
 
-    h1 { font-size: 3.5832rem; }
-    h2 { font-size: 2.986rem; }
-    h3 { font-size: 2.488rem; }
+    h1 {
+      font-size: 3.5832rem;
+    }
+
+    h2 {
+      font-size: 2.986rem;
+    }
+
+    h3 {
+      font-size: 2.488rem;
+    }
+
+    h2, h3 {
+      margin-block-start: 1em;
+    }
+
+    li {
+      padding-inline-start: 1em;
+
+      &.ql-indent-1 {
+        padding-inline-start: 3em;
+      }
+    }
   }
 }

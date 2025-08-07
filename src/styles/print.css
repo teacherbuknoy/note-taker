@@ -1,0 +1,49 @@
+:root {
+  font-size: 12pt;
+}
+
+body {
+  scrollbar-width: none;
+}
+
+.ql-toolbar {
+  display: none;
+}
+
+.ql-container.ql-snow {
+  border: none;
+}
+
+.ql-snow {
+  .ql-editor {
+      scrollbar-width: none;
+    
+    p, ul, ol {
+      font-size: 1rem;
+      color: hsl(var(--neutral-700));
+      break-inside: auto;
+    }
+
+    h1 {
+      font-size: 2.027rem;
+
+    }
+
+    h2 {
+      font-size: 1.802rem;
+    }
+
+    h3 {
+      font-size: 1.602rem;
+    }
+
+    h1, h2, h3 {
+      break-before: auto;
+      break-after: avoid;
+    }
+
+    h2, h3 {
+      margin-block-start: 0.5em;
+    }
+  }
+}
